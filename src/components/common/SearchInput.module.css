@@ -1,0 +1,27 @@
+.wrap {
+  position: relative;
+  flex: 1;
+  min-width: 180px;
+}
+
+.wrap i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-subtle);
+  font-size: 15px;
+}
+
+.input {
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 7px 10px 7px 32px;
+  color: var(--color-text-base);
+  font-size: var(--font-size-base);
+}
+
+.input::placeholder { color: var(--color-text-subtle); }
+.input:focus { border-color: var(--color-primary); background: white; }

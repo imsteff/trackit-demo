@@ -1,0 +1,33 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.waiting   { background: var(--color-yellow-light); color: #b45309; }
+.waiting .dot { background: var(--color-yellow); }
+
+.progress  { background: var(--color-blue-light); color: #1d4ed8; }
+.progress .dot { background: var(--color-blue); }
+
+.resolved  { background: var(--color-green-light); color: #15803d; }
+.resolved .dot { background: var(--color-green); }
+
+.cancelled { background: var(--color-red-light); color: #b91c1c; }
+.cancelled .dot { background: var(--color-red); }
+
+.hold      { background: var(--color-bg); color: var(--color-text-muted); }
+.hold .dot { background: var(--color-text-subtle); }
+
+.escalated { background: #fdf4ff; color: #7e22ce; }
+.escalated .dot { background: #a855f7; }

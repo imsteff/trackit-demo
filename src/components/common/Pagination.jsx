@@ -1,0 +1,26 @@
+import styles from './Pagination.module.css';
+
+export default function Pagination({ page, total, limit, onChange }) {
+  const totalPages = Math.ceil(total / limit);
+  if (totalPages <= 1) return null;
+
+  return (
+    <div className={styles.pagination}>
+      <button className={styles.btn} onClick={() => onChange(page - 1)} disabled={page === 1}>
+        <i className="ti ti-chevron-left" />
+      </button>
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+        <button
+          key={p}
+          className={`${styles.btn} ${p === page ? styles.active : ''}`}
+          onClick={() => onChange(p)}
+        >
+          {p}
+        </button>
+      ))}
+      <button className={styles.btn} onClick={() => onChange(page + 1)} disabled={page === totalPages}>
+        <i className="ti ti-chevron-right" />
+      </button>
+    </div>
+  );
+}

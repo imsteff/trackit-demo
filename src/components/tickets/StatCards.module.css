@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.orange { background: var(--color-primary-light); color: var(--color-primary); }
+.blue   { background: var(--color-blue-light);    color: var(--color-blue); }
+.red    { background: var(--color-red-light);     color: var(--color-red); }
+.green  { background: var(--color-green-light);   color: var(--color-green); }
+
+.trend     { font-size: var(--font-size-sm); color: var(--color-green); font-weight: 600; }
+.trend.neg { color: var(--color-red); }
+
+.value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-subtle);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}

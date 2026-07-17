@@ -1,0 +1,20 @@
+.pagination { display: flex; gap: 4px; }
+
+.btn {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: white;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled):not(.active) { border-color: #cbd5e1; color: var(--color-text-base); }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.btn.active { background: var(--color-primary); border-color: var(--color-primary); color: white; font-weight: 700; }
